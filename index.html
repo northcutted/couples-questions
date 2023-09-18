@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<div id="starterArea">
+    <h2>Enter Player Names</h2>
+    Player 1: <input type="text" id="player1Name">
+    Player 2: <input type="text" id="player2Name">
+    <button onclick="startGame()">Start Game</button>
+</div>
+
+<div id="gameArea" style="display: none;">
+    <h2>Turn: <span id="currentPlayerName"></span></h2>
+    <div id="questionCard" onclick="revealQuestion()">
+        Click to reveal the question
+    </div>
+    <div id="questionDisplay" style="display: none;">
+        <p id="questionText"></p>
+        <button onclick="markAnswer(true)">Correct</button>
+        <button onclick="markAnswer(false)">Wrong</button>
+    </div>
+    <button onclick="endGame()">End Game</button>
+</div>
+
+<div id="scoreArea" style="display: none;">
+    <h2>Game Over!</h2>
+    <p id="player1Score"></p>
+    <p id="player2Score"></p>
+    <button onclick="resetGame()">Play Again</button>
+</div>
+
+<script src="script.js"></script>
+</body>
+
+</html>
