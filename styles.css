@@ -60,22 +60,23 @@ h2 {
 
 button {
     padding: 10px 20px;
+    margin: 5px;
     border: none;
     border-radius: 5px;
-    background-color: #007BFF;
-    color: white;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    margin: 5px;
+    transition: background-color 0.3s, transform 0.1s; /* Smooth transition for hover effects */
+    background-color: #ff91a4; /* Pink color */
+    color: white; /* Text color */
+    font-size: 16px;
 }
 
 button:hover {
-    background-color: #0056b3;
+    background-color: #ff6881; /* A slightly darker shade of pink for hover effect */
+    transform: translateY(-2px); /* Gives a subtle lift effect */
 }
 
-button:disabled {
-    background-color: #b3c7d1;
-    cursor: not-allowed;
+button:active {
+    transform: translateY(0); /* Reset lift effect when button is clicked */
 }
 
 input[type="text"] {
