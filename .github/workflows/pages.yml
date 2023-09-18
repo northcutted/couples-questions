@@ -18,7 +18,7 @@ jobs:
           mkdir output
           cp index.html output/index.html
           cp script.js output/script.js
-          cp style.css output/style.css
+          cp styles.css output/styles.css
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
         with:
